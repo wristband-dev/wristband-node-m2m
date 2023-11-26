@@ -3,7 +3,7 @@
   "description": "",
   "author": "Wristband",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "engines": {
     "node": ">=18.12.1",
     "npm": ">=8.19.2"

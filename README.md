@@ -12,13 +12,6 @@ It uses npm, TypeScript compiler, Jest, webpack, ESLint, Prettier, husky, pinst,
 
 ## Development
 
-### Use as a template
-
-[![Use the template](https://img.shields.io/static/v1?label=&message=Click%20here%20to%20use%20this%20package%20as%20a%20template%20to%20start%20a%20new%20repo%20on%20GitHub&color=brightgreen&style=for-the-badge)](https://github.com/tomchen/example-typescript-package/generate)
-
-(Click the above button to use this example package as a template for your new GitHub repo, this will initialize a new repository and my commits will not be in your git history)
-
-(If you do not use GitHub, you can [download the archive of the example package](https://github.com/tomchen/example-typescript-package/archive/main.zip))
 
 ### Set up tools and environment
 
@@ -54,7 +47,7 @@ Test your code with Jest framework:
 npm run test
 ```
 
-**Note:** Example TypeScript Package uses [husky](https://typicode.github.io/husky/), [pinst](https://github.com/typicode/pinst) and [commitlint](https://commitlint.js.org/) to automatically execute test and [lint commit message](https://www.conventionalcommits.org/) before every commit.
+**Note:** wristband-node-m2 uses [husky](https://typicode.github.io/husky/), [pinst](https://github.com/typicode/pinst) and [commitlint](https://commitlint.js.org/) to automatically execute test and [lint commit message](https://www.conventionalcommits.org/) before every commit.
 
 ### Build
 
@@ -74,15 +67,15 @@ Run:
 npm link
 ```
 
-[npm link](https://docs.npmjs.com/cli/v6/commands/npm-link) will create a symlink in the global folder, which may be **{prefix}/lib/node_modules/example-typescript-package** or **C:\Users\<username>\AppData\Roaming\npm\node_modules\example-typescript-package**.
+[npm link](https://docs.npmjs.com/cli/v6/commands/npm-link) will create a symlink in the global folder, which may be **{prefix}/lib/node_modules/wristband-node-m2** or **C:\Users\<username>\AppData\Roaming\npm\node_modules\wristband-node-m2**.
 
 Create an empty folder elsewhere, you don't even need to `npm init` (to generate **package.json**). Open the folder with VS Code, open a terminal and just run:
 
 ```bash
-npm link example-typescript-package
+npm link wristband-node-m2
 ```
 
-This will create a symbolic link from globally-installed example-typescript-package to **node_modules/** of the current folder.
+This will create a symbolic link from globally-installed wristband-node-m2 to **node_modules/** of the current folder.
 
 You can then create a, for example, **testnum.ts** file with the content:
 
@@ -97,10 +90,10 @@ const result = await sdk.getToken();
 
 If you don't see any linting errors in VS Code, if you put your mouse cursor over `WristbandM2MSdk` and see its type, then it's all good.
 
-Whenever you want to uninstall the globally-installed example-typescript-package and remove the symlink in the global folder, run:
+Whenever you want to uninstall the globally-installed wristband-node-m2 and remove the symlink in the global folder, run:
 
 ```bash
-npm uninstall example-typescript-package -g
+npm uninstall wristband-node-m2 -g
 ```
 
 ### Prepare to publish
@@ -137,11 +130,11 @@ On the page of your newly created or existing GitHub repo, click **Settings** ->
 
 #### CI publishing to GitHub Packages
 
-The default configuration of this example package **assumes you publish package with an unscoped name to npm**. GitHub Packages must be named with a scope name such as "@tomchen/example-typescript-package".
+The default configuration of this example package **assumes you publish package with an unscoped name to npm**. GitHub Packages must be named with a scope name such as "@tomchen/wristband-node-m2".
 
 Change `scope: '@tomchen'` to your own scope in **.github/workflows/publish.yml**, also change `addscope` in **package.json**.
 
-If you publish package with a scoped name to npm, change the name to something like "@tomchen/example-typescript-package" in **package.json**, and remove the `- run: npm run addscope` line in **.github/workflows/publish.yml**
+If you publish package with a scoped name to npm, change the name to something like "@tomchen/wristband-node-m2" in **package.json**, and remove the `- run: npm run addscope` line in **.github/workflows/publish.yml**
 
 If you publish your package to npm only, and don't want to publish to GitHub Packages, then delete the lines from `- name: Setup .npmrc file to publish to GitHub Packages` to the end of the file in **.github/workflows/publish.yml**.
 
@@ -169,7 +162,7 @@ If you want to modify the description / README on the npm package page, you have
 - Works fine in VS Code. In my configuration **.eslintrc** and **.prettierrc** cooperate perfectly
 - See `scripts` in **package.json** for other predefined script commands
 - [pinst](https://github.com/typicode/pinst) is used to solve [a problem of husky](https://typicode.github.io/husky/#/?id=yarn-2)
-- The installation of the package with npm, yarn v1 and yarn v2+ is ensured in [this test](https://github.com/tomchen/example-typescript-package-test)
+- The installation of the package with npm, yarn v1 and yarn v2+ is ensured in [this test](https://github.com/wristband-dev/wristband-node-m2-test)
 
 ## References
 
@@ -178,4 +171,4 @@ If you want to modify the description / README on the npm package page, you have
 - [Publishing - TypeScript docs](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)
 - [Publishing Node.js packages - GitHub Docs](https://docs.github.com/en/free-pro-team@latest/actions/guides/publishing-nodejs-packages)
 
-Btw, if you want to publish Python package, go to [Example PyPI (Python Package Index) Package & Tutorial / Instruction / Workflow for 2021](https://github.com/tomchen/example_pypi_package).
+Btw, if you want to publish Python package, go to [Example PyPI (Python Package Index) Package & Tutorial / Instruction / Workflow for 2021](https://github.com/wristband-dev/wristband-node-m2-test).

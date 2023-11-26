@@ -57,7 +57,8 @@
     "async": "^3.2.4",
     "axios": "^1.5.1",
     "moment": "^2.29.4",
-    "node-cache": "^5.1.2"
+    "node-cache": "^5.1.2",
+    "nock": "^13.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

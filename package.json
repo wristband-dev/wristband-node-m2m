@@ -8,7 +8,7 @@
   "name": "wristband-node-m2m",
   "description": "",
   "author": "Wristband",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "engines": {
     "node": ">=18.12.1",

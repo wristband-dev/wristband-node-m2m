@@ -7,7 +7,7 @@ type Config = {
 };
 
 export class WristbandM2MSdk {
-  public tokenAPI: TokenApiService;
+  private tokenAPI: TokenApiService;
 
   constructor({ appDomain = '', clientId = '', clientSecret = '' }: Config) {
     this.tokenAPI = new TokenApiService(appDomain, clientId, clientSecret);

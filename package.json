@@ -3,7 +3,8 @@
   "exports": {
     "require": "./dist/cjs/index.js",
     "types": "./dist/types/index.d.ts",
-    "default": "./dist/esm/index.js"
+    "default": "./dist/esm/index.js",
+    "import": "./dist/esm/index.js"
   },
   "name": "wristband-node-m2m",
   "description": "",

@@ -1,5 +1,5 @@
 {
-  "name": "wbsdk-example",
+  "name": "wristbandM2MClient-example",
   "version": "1.0.0",
   "private": true,
   "scripts": {

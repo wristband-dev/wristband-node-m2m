@@ -1,14 +1,16 @@
-import {WristbandM2MSdk} from 'wristband-node-m2m';
+import {WristbandM2MClient} from 'wristband-node-m2m';
 
 const APPLICATION_DOMAIN = 'appDomain';
 const CLIENT_ID = 'clientId';
 const CLIENT_SECRET = 'clientSecret';
 
-const sdk = new WristbandM2MSdk({
+const wristbandM2MClient = new WristbandM2MClient({
   appDomain: APPLICATION_DOMAIN, clientId: CLIENT_ID, clientSecret: CLIENT_SECRET
 });
 
 (async () => {
-  const result = await sdk.getToken();
+  const result = await wristbandM2MClient.getToken();
   console.log(result);
+  const result2 = await wristbandM2MClient.getToken();
+  console.log(result2);
 })();

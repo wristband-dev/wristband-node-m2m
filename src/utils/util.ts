@@ -11,6 +11,9 @@ function isExpired(expiresAtMs: any) {
 }
 
 function addSecondsToCurrentTime(numOfSeconds: any) {
+  if(!numOfSeconds){
+    numOfSeconds = 0;
+  }
   return DateTime.now().plus(numOfSeconds * 1000).toMillis();
 }
 
